@@ -1,0 +1,29 @@
+import colorgram
+
+rgb_colors = []
+
+# extracting 40 colors from the picture "image.jpg" (which is tht previously imported Starry Night painting)
+# the colors created comes in a list of hsl colors
+colors = colorgram.extract("image.jpg", 40)
+
+# for-loop taps into each colour of the list "color"
+for color in colors:
+    #vfegetting the colours in rgb format
+    r = color.rgb.r
+    g = color.rgb.g
+    b = color.rgb.b
+    # creating a tuple with the r, g, and b value
+    new_color = (r, g, b)
+    # appending the tuples to the empty library
+    rgb_colors.append(new_color)
+
+print(rgb_colors)
+
+# copy and paste all colour tuples into a new library:
+finished_colors = [(70, 95, 135), (23, 32, 54), (127, 150, 175), (25, 33, 29), (37, 53, 113), (147, 166, 153),
+                   (36, 33, 25), (171, 172, 131), (95, 122, 171), (85, 101, 93), (100, 99, 70), (158, 151, 64),
+                   (202, 203, 147), (30, 25, 29), (213, 214, 187), (113, 137, 125), (73, 77, 36), (196, 213, 200),
+                   (106, 136, 144), (191, 206, 221), (53, 71, 60), (179, 200, 183), (170, 187, 221), (93, 87, 91),
+                   (46, 70, 76), (158, 152, 156), (175, 198, 203), (82, 56, 49), (69, 60, 64), (212, 206, 210),
+                   (132, 124, 130), (195, 189, 193), (137, 124, 120), (197, 189, 188), (223, 201, 6), (252, 201, 6),
+                   (252, 225, 6), (252, 194, 6)]
